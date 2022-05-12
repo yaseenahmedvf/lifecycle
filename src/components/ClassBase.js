@@ -42,7 +42,7 @@ export default class ClassBase extends Component {
   };
 
   shouldComponentUpdate() {
-    if (this.state.updateCount == 30) {
+    if (this.state.updateCount === 30) {
       this.setState({updateCond: false});
     }
     return this.state.updateCond;
