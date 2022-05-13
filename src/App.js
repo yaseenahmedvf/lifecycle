@@ -4,7 +4,10 @@ import FunctionBase from './components/FunctionBase';
 import Navbar from './components/Navbar';
 import Home from './components/Home';
 import { useState } from 'react';
+import TestCom from './components/TestCom';
 import Bank from './components/Bank';
+import ContextAPI from './components/ContextAPI';
+import ContextState from './context/ContextState';
 
 import {
   BrowserRouter as Router,
@@ -27,6 +30,7 @@ const toggleMode = () => {
 }
   return (
     <>
+    <ContextState>
       <Router>
         <Navbar mode={mode} toggleMode={toggleMode}/>
         <div className="container my-3">
@@ -35,9 +39,12 @@ const toggleMode = () => {
             <Route path="/lifecycle" element={<Body />} />
             <Route path="/hooks" element={<FunctionBase />} />
             <Route path="/redux" element={<Bank />} />
+            <Route path="/context" element={<ContextAPI />} />
+            <Route path="/hoc" element={<TestCom />} />
           </Routes>
         </div>
       </Router>
+      </ContextState>
     </>
   );
 }

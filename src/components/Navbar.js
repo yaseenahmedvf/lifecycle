@@ -33,7 +33,13 @@ export default function Navbar(props) {
                 <Link className="nav-link" to="/hooks" onClick={()=>(changeTitle("Hooks"))}>Hooks</Link>
               </li>
               <li className="nav-item">
+                <Link className="nav-link" to="/hoc" onClick={()=>(changeTitle("High Order Component"))}>HOC</Link>
+              </li>
+              <li className="nav-item">
                 <Link className="nav-link" to="/redux" onClick={()=>(changeTitle("Redux"))}>Redux</Link>
+              </li>
+              <li className="nav-item">
+                <Link className="nav-link" to="/context" onClick={()=>(changeTitle("ContextAPI"))}>contextAPI</Link>
               </li>
             </ul>
             {/* <form className="d-flex">
